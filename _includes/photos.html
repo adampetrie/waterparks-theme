@@ -1,0 +1,27 @@
+<h3>
+  <span class="icon fa fa-camera-retro"></span>
+  Photos
+  <div class="key-line"></div>  
+</h3>
+
+<div class="row">
+{% if include.path %}
+  <div class="clearfix">
+    {% for image in site.static_files %}
+      {% if image.path contains {{include.path}} %}
+        <a class="col-xs-12 col-sm-4 col-md-4 thumb" data-lightbox="gallery" href="{{ image.path }}">
+          <img class="img-responsive img-thumbnail" src="{{ site.baseurl }}{{ image.path }}" alt="{{ page.title }}" title="{{ page.title }}"/>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <p class="pull-right disclaimer">{{include.source}}</p>
+{% else %}
+  <div class="no-photos text-center">
+    <div>
+      <p>No Photos Available</p>
+    </div>
+    <i class="fa fa-picture-o" aria-hidden="true"></i>
+  </div>
+{% endif %}
+</div>
