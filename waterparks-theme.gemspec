@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name     = 'Water Parks Theme'
+  s.name     = 'waterparks-theme'
   s.version  = '0.1.0'
   s.license  = 'MIT'
   s.summary  = 'Theme used for water parks sites'
